@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+body {
+  width: 320px;
+  margin: 0;
+  padding: 14px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  background: #313338;
+  color: #dbdee1;
+}
+h1 { font-size: 15px; margin: 0 0 10px; color: #fff; }
+.channel {
+  background: #2b2d31;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #b5bac1;
+  word-break: break-all;
+}
+.channel.ready { color: #fff; }
+.channel.err { color: #fab1b1; }
+section { margin-bottom: 12px; }
+.label { font-weight: 600; color: #f2f3f5; margin-bottom: 6px; }
+.quick { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.quick button {
+  background: #4e5058; color: #fff; border: none; border-radius: 4px;
+  padding: 4px 8px; font-size: 12px; cursor: pointer;
+}
+.quick button:hover { background: #6d6f78; }
+.hint { font-size: 11px; color: #949ba4; margin-top: 4px; }
+
+/* Inline calendar — drawn in the panel so no native popup gets clipped. */
+.cal { background: #2b2d31; border-radius: 6px; padding: 8px; }
+.cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; font-weight: 600; color: #fff; }
+.cal-head button { background: #4e5058; color: #fff; border: none; border-radius: 4px; width: 26px; height: 24px; font-size: 15px; cursor: pointer; }
+.cal-head button:hover { background: #6d6f78; }
+.grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.grid .dow { text-align: center; font-size: 11px; color: #949ba4; padding: 2px 0; }
+.day { background: transparent; color: #dbdee1; border: none; border-radius: 4px; height: 28px; cursor: pointer; font-size: 12px; }
+.day:hover { background: #4e5058; }
+.day.in { background: #3b4178; }
+.day.edge { background: #5865f2; color: #fff; font-weight: 600; }
+.day.today { outline: 1px solid #6d6f78; }
+.times { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.times label { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.times .d { color: #fff; min-width: 86px; }
+.times input { background: #1e1f22; color: #fff; border: 1px solid #1e1f22; border-radius: 4px; padding: 3px 6px; }
+.formats { display: flex; flex-wrap: wrap; gap: 10px; }
+.formats label { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+.primary {
+  width: 100%; background: #5865f2; color: #fff; border: none; border-radius: 4px;
+  padding: 9px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.primary:hover { background: #4752c4; }
+.primary:disabled { background: #3c3f88; color: #aab; cursor: not-allowed; }
+.status { margin-top: 10px; font-size: 12px; min-height: 16px; }
+.status.err { color: #fab1b1; }
+.status.ok { color: #a6e3a1; }
+.warn { margin-top: 12px; font-size: 11px; color: #949ba4; }
+.warn summary { cursor: pointer; color: #f0b232; }
+.warn { line-height: 1.5; }

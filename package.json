@@ -1,0 +1,16 @@
+{
+  "name": "discord-exporter",
+  "version": "1.0.0",
+  "description": "Firefox extension to export the current Discord channel's chat history within a chosen time range.",
+  "scripts": {
+    "test": "node test/run.js",
+    "lint": "web-ext lint --source-dir src --self-hosted",
+    "start": "web-ext run --source-dir src",
+    "build": "web-ext build --source-dir src --artifacts-dir dist --overwrite-dest"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "web-ext": "^10.8.0"
+  }
+}

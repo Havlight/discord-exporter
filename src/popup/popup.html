@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>匯出 Discord 對話</h1>
+
+  <div id="channel" class="channel">偵測頻道中…</div>
+
+  <section>
+    <div class="label">時間範圍</div>
+    <div class="quick">
+      <button data-range="today" type="button">今天</button>
+      <button data-range="yesterday" type="button">昨天</button>
+      <button data-range="24h" type="button">近 24 小時</button>
+      <button data-range="7d" type="button">近 7 天</button>
+      <button data-range="all" type="button">全部</button>
+    </div>
+    <div class="cal">
+      <div class="cal-head">
+        <button id="prev" type="button" aria-label="上個月">‹</button>
+        <span id="month"></span>
+        <button id="next" type="button" aria-label="下個月">›</button>
+      </div>
+      <div id="grid" class="grid"></div>
+      <div id="pickHint" class="hint"></div>
+    </div>
+    <div class="times">
+      <label>起 <span id="startDate" class="d"></span> <input type="time" id="startTime" step="60"></label>
+      <label>迄 <span id="endDate" class="d"></span> <input type="time" id="endTime" step="60"></label>
+    </div>
+    <div class="hint">起訖顛倒會自動對調。「全部」會抓取整個頻道。</div>
+  </section>
+
+  <section>
+    <div class="label">匯出格式</div>
+    <div class="formats">
+      <label><input type="checkbox" value="html" checked> HTML</label>
+      <label><input type="checkbox" value="json"> JSON</label>
+      <label><input type="checkbox" value="txt"> TXT</label>
+      <label><input type="checkbox" value="csv"> CSV</label>
+    </div>
+  </section>
+
+  <button id="export" class="primary" type="button" disabled>匯出</button>
+
+  <div id="status" class="status"></div>
+
+  <details class="warn">
+    <summary>⚠ 使用須知</summary>
+    本工具透過你登入的帳號呼叫 Discord 私有 API。自動化使用者帳號違反 Discord 服務條款，可能導致帳號被停權。僅供匯出你自己有權存取的資料，風險自負。
+  </details>
+
+  <script src="../lib/session.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
