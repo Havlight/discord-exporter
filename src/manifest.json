@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Discord Channel Exporter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "匯出目前 Discord 頻道在指定時間範圍內的對話紀錄（HTML / JSON / TXT / CSV）。",
   "browser_specific_settings": {
     "gecko": {
       "id": "discord-channel-exporter@local",
       "strict_min_version": "142.0",
       "data_collection_permissions": {
-        "required": ["none"]
+        "required": ["authenticationInfo", "browsingActivity"]
       }
     }
   },
@@ -31,6 +31,6 @@
       "run_at": "document_idle"
     }
   ],
-  "permissions": ["scripting", "activeTab", "downloads", "storage"],
+  "permissions": ["scripting", "activeTab", "downloads"],
   "host_permissions": ["https://discord.com/*"]
 }

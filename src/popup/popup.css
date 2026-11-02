@@ -60,3 +60,4 @@ section { margin-bottom: 12px; }
 .warn { margin-top: 12px; font-size: 11px; color: #949ba4; }
 .warn summary { cursor: pointer; color: #f0b232; }
 .warn { line-height: 1.5; }
+.hint a { color: #8ab4f8; }
